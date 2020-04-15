@@ -1,0 +1,234 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+a, a:visited, a:hover {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #125699;
+}
+
+.search-wrapper {
+    padding: 16px 0 !important;
+    border-top: 1px solid #d1d5da !important;
+}
+
+.search-wrapper input {
+    width: calc(100% - 18px);
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.profile-container img {
+    margin: 0 16px;
+}
+
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+header img {
+    margin: 0 16px;
+}
+
+header .title {
+    font-size: 30px;
+}
+
+.info span {
+    margin-right: 20px;
+    color: #192533;
+}
+
+.content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    min-height: calc(100vh - 194px);
+}
+
+svg.material-icons {
+    height: 35px;
+    width: auto;
+}
+
+.card svg.material-icons path {
+    fill: #888;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    min-height: 70px;
+    margin: 0 0 16px;
+    padding: 16px;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+}
+
+.card a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card-img {
+    padding: 4px 10px;
+    height: 65px;
+    text-align: center;
+}
+
+.card-img img {
+    height: 100%;
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.card-content .info {
+    width: calc(100% - 35px);
+}
+
+.card-content .info h3 {
+    line-height: 33px;
+    font-size: 32px;
+    margin: 0 0 3px;
+}
+
+.card-content span {
+    font-size: 18px;
+    margin-right: 0;
+}
+
+.card-content span + span::before{
+    content: ' | ';
+    color: #1976D2;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+}
+
+.card-container>*:not(.circle-link) {
+    width: 100%;
+}
+
+.total-items {
+    padding: 16px 0 !important;
+    border-top: 1px solid #d1d5da!important;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    flex-direction: column;
+    height: 60px;
+    padding-top: 10px;
+    background-color: #1976d2;
+    color: white;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+    .card-container>*:not(.circle-link) {
+        width: 100%;
+    }
+
+    .card-content {
+        margin-left: 10px;
+    }
+
+    .card-content .info h3 {
+        line-height: 33px;
+        font-size: 32px;
+        margin: 0 0 10px;
+    }
+
+    .card-content span + span::before{
+        content: '';
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card-content span {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+}

@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "w0": "ng serve w0-initialize -o"
+    "w0": "ng serve w0-initialize -o",
+    "w1": "ng serve w1-github-app -o"
   },
   "private": true,
   "dependencies": {
