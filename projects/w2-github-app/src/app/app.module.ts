@@ -7,6 +7,7 @@ import { UsersListComponent } from './components/user-list/user-list.component';
 import { RepositoryService } from './services/repository.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RepoListComponent } from './components/repo-list/repo-list.component';
+import { MaterialModule } from './shared/material.motule';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RepoListComponent } from './components/repo-list/repo-list.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [
     RepositoryService

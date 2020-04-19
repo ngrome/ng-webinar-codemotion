@@ -2,11 +2,22 @@
 
 @include mat-core();
 
-$w2-github-app-primary: mat-palette($mat-indigo);
-$w2-github-app-accent: mat-palette($mat-pink, A200, A100, A400);
-$w2-github-app-warn: mat-palette($mat-red);
+$light-primary: mat-palette($mat-indigo);
+$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-warn: mat-palette($mat-red);
 
-$w2-github-app-theme: mat-light-theme($w2-github-app-primary, $w2-github-app-accent, $w2-github-app-warn);
+$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 
-@include angular-material-theme($w2-github-app-theme);
+@include angular-material-theme($light-theme);
+
+// Our dark theme
+.dark-theme {
+    color: $light-primary-text;
+    $dark-primary: mat-palette($mat-yellow);
+    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+    $dark-warn: mat-palette($mat-red);
+    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  
+    @include angular-material-theme($dark-theme);
+  }
 
