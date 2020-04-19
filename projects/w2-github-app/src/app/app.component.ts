@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'w2-github-app';
+  organization = 'ngRome';
 }

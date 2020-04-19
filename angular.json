@@ -378,6 +378,7 @@
               "projects/w2-github-app/src/assets"
             ],
             "styles": [
+              "projects/w2-github-app/src/custom-theme.scss",
               "projects/w2-github-app/src/styles.css"
             ],
             "scripts": []
@@ -473,6 +474,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-webinar-codemotion"
 }

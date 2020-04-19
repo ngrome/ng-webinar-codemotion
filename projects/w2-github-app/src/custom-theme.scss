@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$w2-github-app-primary: mat-palette($mat-indigo);
+$w2-github-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$w2-github-app-warn: mat-palette($mat-red);
+
+$w2-github-app-theme: mat-light-theme($w2-github-app-primary, $w2-github-app-accent, $w2-github-app-warn);
+
+@include angular-material-theme($w2-github-app-theme);
+
