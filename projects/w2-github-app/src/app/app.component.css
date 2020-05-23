@@ -25,3 +25,11 @@
     color: white;
     height: 60px;
 }
+
+.toggle-position {
+    padding: 0 14px;
+}
+
+.toggle-spacer {
+    flex: 1 1 auto;
+  }

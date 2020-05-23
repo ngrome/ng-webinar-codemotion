@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CustomThemeService } from './services/customTheme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'w2-github-app';
   organization = 'ngRome';
+  isDark: Observable<boolean>;
+
+  constructor(private customThemeService: CustomThemeService) { }
+
+  ngOnInit() {
+    this.isDark = this.customThemeService.isDark;
+  }
+
+  toggleDarkTheme(checked: boolean) {
+    this.customThemeService.applyDarkTheme(checked);
+  }
 }

@@ -1,28 +1,38 @@
-<!-- Header -->
+<div [ngClass]="{'dark-theme': isDark | async}">
 
-<div class="header-toolbar">
-  <mat-toolbar color="primary">
-    <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
-    <span class="title">{{title}}</span>
-  </mat-toolbar>
-</div>
+  <!-- Header -->
 
-<!-- Content -->
+  <div class="header-toolbar">
 
-<div class="content" role="main">
-  <div class="card-container">
-
-    <router-outlet></router-outlet>
+    <mat-toolbar color="primary">
+      <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
+      <span class="title">{{title}}</span>
+      <span class="toggle-spacer"></span>
+        <mat-slide-toggle class="toggle-position" [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
+    </mat-toolbar>
 
   </div>
-</div>
-
-<!-- Footer -->
-
-<div class="footer-toolbar">
-  <mat-toolbar color="primary">
-    <div style="width: 100%;">
-      <p>Created by {{organization}}</p>
+  
+  <!-- Content -->
+  
+  <div class="content" role="main">
+    <div class="card-container">
+  
+      <router-outlet></router-outlet>
+  
     </div>
-  </mat-toolbar>
+  </div>
+  
+  <!-- Footer -->
+  
+  <div class="footer-toolbar">
+
+    <mat-toolbar color="primary">
+      <div style="width: 100%;">
+        <p>Created by {{organization}}</p>
+      </div>
+    </mat-toolbar>
+  </div>
+
 </div>
+
