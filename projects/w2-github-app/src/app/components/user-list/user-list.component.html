@@ -1,11 +1,9 @@
 <!-- Search Container -->
 <div class="search-container">
 
-    <h3>Find user on Github</h3>
-
     <mat-form-field class="search-user-from-field">
         <mat-icon matPrefix>search</mat-icon>
-        <mat-label>User</mat-label>
+        <mat-label>Find user on Github</mat-label>
         <input matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
         <mat-hint align="start">Press Enter to Search</mat-hint>
     </mat-form-field>

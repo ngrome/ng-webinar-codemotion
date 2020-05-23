@@ -182,7 +182,7 @@ svg.material-icons {
 
 .total-items {
     padding: 16px 0 !important;
-    border-top: 1px solid #d1d5da!important;
+    /* border-top: 1px solid #d1d5da!important; */
     margin: 0;
 }
 

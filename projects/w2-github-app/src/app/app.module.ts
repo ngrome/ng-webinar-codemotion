@@ -8,6 +8,8 @@ import { RepositoryService } from './services/repository.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RepoListComponent } from './components/repo-list/repo-list.component';
 import { MaterialModule } from './shared/material.motule';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MaterialModule } from './shared/material.motule';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [
     RepositoryService
