@@ -1,20 +1,21 @@
 <!-- Header -->
-<header class="light-theme">
-  <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
-  <span class="title">{{title}}</span>
-  <button mat-button color="primary">LOL</button>
-</header>
+<div class="light-theme"> 
+  <header class="header-custom">
+    <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
+    <span class="title">{{title}}</span>
+  </header>
 
-<!-- Content -->
-<div class="content" role="main">
-  <div class="card-container">
+  <!-- Content -->
+  <div class="content" role="main">
+    <div class="card-container">
 
-    <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
 
-  </div>  
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by {{organization}}</p>
+  </footer>
 </div>
-
-<!-- Footer -->
-<footer>
-  <p>Created by {{organization}}</p>
-</footer>

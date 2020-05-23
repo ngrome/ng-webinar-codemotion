@@ -1,13 +1,14 @@
 <!-- Search Container -->
 <div class="search-container">
 
-    <h2>Find user on Github:</h2>
+    <h3>Find user on Github</h3>
 
-    <div class="search-wrapper">
-        <input placeholder="Press enter to search" 
-               type="text" class="search-field" 
-               #text (keyup.enter)="searchUser(text.value)"/>
-    </div>
+    <mat-form-field class="search-user-from-field">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-label>User</mat-label>
+        <input matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
+        <mat-hint align="start">Press Enter to Search</mat-hint>
+    </mat-form-field>
 
 </div>
 
@@ -17,21 +18,17 @@
     <h3 class="total-items">Total: {{totalItems}}</h3>
 
     <div class="card" *ngFor="let user of gitUsers">
-
         <a rel="noopener" routerLink="{{user.login}}/repos">
-            <div class="card-img">
-                <img src="{{user.avatar_url}}"/>
-            </div>
-            
-            <div class="card-content">
-                <div class="info">
-                    <h3>{{user.login}}</h3>
-                    <span>Type: {{user.type}} - Score {{user.score}}</span>
-                </div>
-                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-            </div>
+            <mat-card class="user-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="user-header-image"
+                        [ngStyle]="{'background-image': 'url(' + user.avatar_url + ')'}">
+                    </div>
+                    <mat-card-title>{{user.login}}</mat-card-title>
+                    <mat-card-subtitle>Type: {{user.type}} - Score {{user.score}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
         </a>
-
     </div>
-
 </div>
+

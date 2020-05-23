@@ -1,6 +1,6 @@
 <div class="profile-container" *ngIf="(owner$ | async) as owner">
 
-    <img class="material-icons" src="{{owner.avatar_url}}" width="65px"/>
+    <img class="material-icons" src="{{owner.avatar_url}}" width="65px" />
     <h2>{{owner.login}}</h2>
 
 </div>
@@ -13,20 +13,21 @@
 
         <div class="card" *ngFor="let repo of repos">
 
-            <a rel="noopener">
-                <div class="card-content">
-                    <div class="info">
-                        <h3>{{repo.name}}</h3>
-                        <span>Created at: {{repo.created_at | date: 'dd/MM/yyyy'}} </span>
+            <mat-card class="repo-card">
+                <mat-card-header>
+                    <mat-card-title>{{repo.name}}</mat-card-title>
+                    <mat-card-subtitle>Created at: {{repo.created_at | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="repo-content">
                         <span>Language:{{repo.language}} </span>
                         <span>Open Issues: {{repo.open_issues_count}} </span>
-                        <span>Size: {{repo.size}}</span><br/>
+                        <span>Size: {{repo.size}}</span><br />
                     </div>
-                    <!-- <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg> -->
-                </div>
-            </a>
-            
-        </div>  
+                </mat-card-content>
+            </mat-card>
+
+        </div>
 
     </div>
 
