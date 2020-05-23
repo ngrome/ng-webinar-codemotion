@@ -2,6 +2,14 @@
     width: 100% !important;
 }
 
+.card-no-cursor {
+    cursor: default !important;
+}
+
 .repo-content {
     margin: 0 16px;
+}
+
+.repo-actions {
+    float: right;
 }

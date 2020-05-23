@@ -1,10 +1,10 @@
 <!-- Search Container -->
 <div class="search-container">
 
-    <mat-form-field class="search-user-from-field">
-        <mat-icon matPrefix>search</mat-icon>
+    <mat-form-field appearance="outline" class="search-user-from-field">
+        <!-- <mat-icon matPrefix>search</mat-icon> -->
         <mat-label>Find user on Github</mat-label>
-        <input matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
+        <input  matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
         <mat-hint align="start">Press Enter to Search</mat-hint>
     </mat-form-field>
 
@@ -13,7 +13,9 @@
 <!-- Results Container-->
 <div class="result-content" *ngIf="gitUsers">
 
-    <h3 class="total-items">Total: {{totalItems}}</h3>
+    <mat-divider></mat-divider>
+
+    <label mat-label color="warn">Total: {{totalItems}}</label>
 
     <div class="card" *ngFor="let user of gitUsers">
         <a rel="noopener" routerLink="{{user.login}}/repos">
@@ -29,4 +31,3 @@
         </a>
     </div>
 </div>
-

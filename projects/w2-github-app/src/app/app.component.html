@@ -1,21 +1,28 @@
 <!-- Header -->
-<div class="light-theme"> 
-  <header class="header-custom">
+
+<div class="header-toolbar">
+  <mat-toolbar color="primary">
     <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
     <span class="title">{{title}}</span>
-  </header>
+  </mat-toolbar>
+</div>
 
-  <!-- Content -->
-  <div class="content" role="main">
-    <div class="card-container">
+<!-- Content -->
 
-      <router-outlet></router-outlet>
+<div class="content" role="main">
+  <div class="card-container">
 
-    </div>
+    <router-outlet></router-outlet>
+
   </div>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    <p>Created by {{organization}}</p>
-  </footer>
+<!-- Footer -->
+
+<div class="footer-toolbar">
+  <mat-toolbar color="primary">
+    <div style="width: 100%;">
+      <p>Created by {{organization}}</p>
+    </div>
+  </mat-toolbar>
 </div>

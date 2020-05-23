@@ -36,4 +36,8 @@ export class RepoListComponent implements OnInit {
     this.repos$ = this.repoService.getUserRepos(this.selectedUser);
   }
 
+  navigateToRepo(repo) {
+    window.open(repo, "_blank");
+  }
+
 }

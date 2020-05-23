@@ -1,0 +1,27 @@
+.header-toolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.header-toolbar img {
+    margin: 0 16px;
+}
+
+.header-toolbar .title {
+    font-size: 30px;
+}
+
+.footer-toolbar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+    flex-direction: column;
+    padding-top: 10px;
+    color: white;
+    height: 60px;
+}

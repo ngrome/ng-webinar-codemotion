@@ -103,6 +103,8 @@ svg.material-icons {
     justify-content: center;
     margin-top: 16px;
     width: 100%;
+    height: 100%;
+    /* overflow-y: auto; */
 }
 
 .card {
@@ -165,6 +167,7 @@ svg.material-icons {
 
 .card-container .card:not(.highlight-card) {
     cursor: pointer;
+
 }
 
 .card-container .card:not(.highlight-card):hover {
@@ -182,7 +185,7 @@ svg.material-icons {
 
 .total-items {
     padding: 16px 0 !important;
-    /* border-top: 1px solid #d1d5da!important; */
+    border-top: 1px solid #d1d5da!important;
     margin: 0;
 }
 

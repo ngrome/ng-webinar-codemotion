@@ -13,6 +13,10 @@ export class UsersListComponent implements OnInit {
   totalItems: number;
   gitUsers: GitUser[];
 
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+
   constructor(private repoService: RepositoryService) { }
 
   ngOnInit() { }

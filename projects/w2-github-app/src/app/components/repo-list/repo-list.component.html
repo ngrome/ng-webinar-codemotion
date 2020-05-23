@@ -7,11 +7,13 @@
 
 <div class="result-content" *ngIf="(repos$| async) as repos">
 
-    <h3 class="total-items">Number of Repo: {{repos.length}}</h3>
+    <mat-divider></mat-divider>
+
+    <mat-label>Number of Repo: {{repos.length}}</mat-label>
 
     <div class="card-container">
 
-        <div class="card" *ngFor="let repo of repos">
+        <div class="card card-no-cursor" *ngFor="let repo of repos, let i = index">
 
             <mat-card class="repo-card">
                 <mat-card-header>
@@ -20,11 +22,16 @@
                 </mat-card-header>
                 <mat-card-content>
                     <div class="repo-content">
-                        <span>Language:{{repo.language}} </span>
+                        <span>Language: {{repo.language}} </span>
+                        <span> || </span>
                         <span>Open Issues: {{repo.open_issues_count}} </span>
+                        <span> || </span>
                         <span>Size: {{repo.size}}</span><br />
                     </div>
                 </mat-card-content>
+                <mat-card-actions class="repo-actions">
+                    <button mat-button color="primary" (click)="navigateToRepo(repo.html_url)">Go to Repository</button>
+                </mat-card-actions>
             </mat-card>
 
         </div>
