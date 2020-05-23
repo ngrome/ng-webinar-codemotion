@@ -12,4 +12,5 @@
 
 .repo-actions {
     float: right;
+    padding: 0.5em !important;
 }
