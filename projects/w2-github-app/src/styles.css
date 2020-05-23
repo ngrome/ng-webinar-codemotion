@@ -200,6 +200,18 @@ footer {
     color: white;
 }
 
+.custom-divider {
+    padding-bottom: 1em;
+}
+
+.custom-label {
+    padding-bottom: 1em;
+}
+
+.card-container {
+    padding-top: 0.5em
+}
+
 /* Responsive Styles */
 
 @media screen and (max-width: 767px) {

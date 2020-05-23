@@ -7,9 +7,9 @@
 
 <div class="result-content" *ngIf="(repos$| async) as repos">
 
-    <mat-divider></mat-divider>
+    <mat-divider class="custom-divider"></mat-divider>
 
-    <mat-label>Number of Repo: {{repos.length}}</mat-label>
+    <label class="custom-label">Number of Repo: {{repos.length}}</label>
 
     <div class="card-container">
 

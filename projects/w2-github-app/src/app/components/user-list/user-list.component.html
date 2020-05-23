@@ -4,7 +4,7 @@
     <mat-form-field appearance="outline" class="search-user-from-field">
         <!-- <mat-icon matPrefix>search</mat-icon> -->
         <mat-label>Find user on Github</mat-label>
-        <input  matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
+        <input matInput #text placeholder="Ex. Angular" (keyup.enter)="searchUser(text.value)">
         <mat-hint align="start">Press Enter to Search</mat-hint>
     </mat-form-field>
 
@@ -13,21 +13,23 @@
 <!-- Results Container-->
 <div class="result-content" *ngIf="gitUsers">
 
-    <mat-divider></mat-divider>
+    <mat-divider class="custom-divider"></mat-divider>
 
-    <label mat-label color="warn">Total: {{totalItems}}</label>
+    <label class="custom-label" mat-label color="warn">Total: {{totalItems}}</label>
 
-    <div class="card" *ngFor="let user of gitUsers">
-        <a rel="noopener" routerLink="{{user.login}}/repos">
-            <mat-card class="user-card">
-                <mat-card-header>
-                    <div mat-card-avatar class="user-header-image"
-                        [ngStyle]="{'background-image': 'url(' + user.avatar_url + ')'}">
-                    </div>
-                    <mat-card-title>{{user.login}}</mat-card-title>
-                    <mat-card-subtitle>Type: {{user.type}} - Score {{user.score}}</mat-card-subtitle>
-                </mat-card-header>
-            </mat-card>
-        </a>
+    <div class="card-container">
+        <div class="card" *ngFor="let user of gitUsers">
+            <a rel="noopener" routerLink="{{user.login}}/repos">
+                <mat-card class="user-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="user-header-image"
+                            [ngStyle]="{'background-image': 'url(' + user.avatar_url + ')'}">
+                        </div>
+                        <mat-card-title>{{user.login}}</mat-card-title>
+                        <mat-card-subtitle>Type: {{user.type}} - Score {{user.score}}</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+            </a>
+        </div>
     </div>
 </div>

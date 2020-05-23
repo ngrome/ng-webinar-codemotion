@@ -1,7 +1,10 @@
+.search-container {
+    padding-bottom: 1em;
+}
+
 .search-user-from-field {
     width: 100%;
 }
-
 
 .user-card {
     width: 100% ;
