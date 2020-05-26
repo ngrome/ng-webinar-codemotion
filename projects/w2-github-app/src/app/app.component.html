@@ -8,7 +8,7 @@
       <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
       <span class="title">{{title}}</span>
       <span class="toggle-spacer"></span>
-        <mat-slide-toggle class="toggle-position" [checked]="isDarkTheme | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
+        <mat-slide-toggle class="toggle-position" [checked]="isDark | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
     </mat-toolbar>
 
   </div>
