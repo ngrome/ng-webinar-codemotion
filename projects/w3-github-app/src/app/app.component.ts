@@ -9,7 +9,7 @@ import { CustomThemeService } from './services/customTheme.service';
 })
 export class AppComponent {
 
-  title = 'w2-github-app';
+  title = 'w3-github-app';
   organization = 'ngRome';
   isDark: Observable<boolean>;
 

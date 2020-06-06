@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "w0": "ng serve w0-initialize -o",
     "w1": "ng serve w1-github-app -o",
-    "w2": "ng serve w2-github-app -o"
+    "w2": "ng serve w2-github-app -o",
+    "w3": "ng serve w3-github-app -o"
   },
   "private": true,
   "dependencies": {
