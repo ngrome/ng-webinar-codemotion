@@ -1,0 +1,38 @@
+<div [ngClass]="{'dark-theme': isDark | async}">
+
+  <!-- Header -->
+
+  <div class="header-toolbar">
+
+    <mat-toolbar color="primary">
+      <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
+      <span class="title">{{title}}</span>
+      <span class="toggle-spacer"></span>
+        <mat-slide-toggle class="toggle-position" [checked]="isDark | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
+    </mat-toolbar>
+
+  </div>
+  
+  <!-- Content -->
+  
+  <div class="content" role="main">
+    <div class="card-container">
+  
+      <router-outlet></router-outlet>
+  
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  
+  <div class="footer-toolbar">
+
+    <mat-toolbar color="primary">
+      <div style="width: 100%;">
+        <p>Created by {{organization}}</p>
+      </div>
+    </mat-toolbar>
+  </div>
+
+</div>
+

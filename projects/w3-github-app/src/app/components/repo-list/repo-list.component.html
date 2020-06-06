@@ -1,0 +1,41 @@
+<div class="profile-container" *ngIf="(owner$ | async) as owner">
+
+    <img class="material-icons" src="{{owner.avatar_url}}" width="65px" />
+    <h2>{{owner.login}}</h2>
+
+</div>
+
+<div class="result-content" *ngIf="(repos$| async) as repos">
+
+    <mat-divider class="custom-divider"></mat-divider>
+
+    <label class="custom-label">Number of Repo: {{repos.length}}</label>
+
+    <div class="card-container">
+
+        <div class="card card-no-cursor" *ngFor="let repo of repos, let i = index">
+
+            <mat-card class="repo-card">
+                <mat-card-header>
+                    <mat-card-title>{{repo.name}}</mat-card-title>
+                    <mat-card-subtitle>Created at: {{repo.created_at | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="repo-content">
+                        <span>Language: {{repo.language}} </span>
+                        <span> || </span>
+                        <span>Open Issues: {{repo.open_issues_count}} </span>
+                        <span> || </span>
+                        <span>Size: {{repo.size}}</span><br />
+                    </div>
+                </mat-card-content>
+                <mat-card-actions class="repo-actions">
+                    <button mat-raised-button color="accent" (click)="navigateToRepo(repo.html_url)">Go to Repository</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+
+    </div>
+
+</div>
