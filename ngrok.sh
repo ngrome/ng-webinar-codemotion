@@ -5,7 +5,7 @@
 ng build w3-github-app
 
 # Run a local server using http-server
-http-server dist/example -p 4201
+http-server dist/w3-github-app -p 4201
 
 # Run ngrok on port 4201
 ngrok http 4201
