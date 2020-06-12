@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { RepositoryService } from "./services/repository.service";
 import { HttpClientModule } from "@angular/common/http";
-import { MaterialModule } from "./shared/material.motule";
+import { MaterialModule } from "./shared/material.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
