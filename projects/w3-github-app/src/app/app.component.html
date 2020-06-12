@@ -7,8 +7,13 @@
     <mat-toolbar color="primary">
       <img width="40" alt="Angular Rome" src="../assets/angular-rome-logo.png" />
       <span class="title">{{title}}</span>
-      <span class="toggle-spacer"></span>
-        <mat-slide-toggle class="toggle-position" [checked]="isDark | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
+
+      <span class="toggle-spacer">
+        <span class="navigation-link" routerLink="/users">User search</span>
+        <span class="navigation-link" routerLink="/my-profile">My profile</span>
+      </span>
+
+      <mat-slide-toggle class="toggle-position" [checked]="isDark | async" (change)="toggleDarkTheme($event.checked)">Dark Theme</mat-slide-toggle>
     </mat-toolbar>
 
   </div>
