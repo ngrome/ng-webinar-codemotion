@@ -14,3 +14,8 @@
     float: right;
     padding: 0.5em !important;
 }
+
+.search-user-from-field {
+    width: 100%;
+    margin-top: 0.5em;
+}

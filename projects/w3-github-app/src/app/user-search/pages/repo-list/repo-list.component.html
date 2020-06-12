@@ -11,6 +11,12 @@
 
     <label class="custom-label">Number of Repo: {{repos.length}}</label>
 
+    <mat-form-field appearance="outline" class="search-user-from-field">
+        <mat-label>Filter repos by language</mat-label>
+        <input matInput #text placeholder="Ex. Typescript" (keyup.enter)="goToFilteredRepos(text.value)">
+        <mat-hint align="start">Press Enter to Search</mat-hint>
+    </mat-form-field>
+    
     <div class="card-container">
 
         <div class="card card-no-cursor" *ngFor="let repo of repos, let i = index">

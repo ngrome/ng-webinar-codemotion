@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RepositoryService } from '../../services/repository.service';
-import { GitUser } from '../../models/git-user';
+import { RepositoryService } from '../../../services/repository.service';
+import { GitUser } from '../../../models/git-user';
 
 @Component({
   selector: 'app-git-users',
