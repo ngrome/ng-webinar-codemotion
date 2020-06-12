@@ -29,12 +29,12 @@ export class RepoListComponent implements OnInit {
   ngOnInit() {
     this.selectedUser = this.route.snapshot.paramMap.get("username");
 
-    this.route.queryParams.pipe(take(1)).subscribe((params: Params) => {
+    this.route.queryParams.subscribe((params: Params) => {
       this.languageToFilter = params.languageToFilter;
+      this.getOwnerRepos();
     });
 
     this.getOwnerDetails();
-    this.getOwnerRepos();
   }
 
   private getOwnerDetails() {
@@ -58,12 +58,8 @@ export class RepoListComponent implements OnInit {
   }
 
   goToFilteredRepos(text: string) {
-    this.router.navigateByUrl("/", { skipLocationChange: true }).then(() =>
-
-      this.router.navigate(["users", this.selectedUser, "repos"], {
-        queryParams: { languageToFilter: text }
-      })
-      
-    );
+    this.router.navigate(["users", this.selectedUser, "repos"], {
+      queryParams: { languageToFilter: text },
+    });
   }
 }
