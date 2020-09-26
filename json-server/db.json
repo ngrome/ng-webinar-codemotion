@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "User2",
-    "surname": "Test3"
+    "surname": "Test3",
+    "gitLogin": "ASD"
   },
   "activities": [
     {

@@ -7,6 +7,7 @@ import { RepositoryService } from "./services/repository.service";
 import { HttpClientModule } from "@angular/common/http";
 import { MaterialModule } from "./shared/material.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {HasGitUsernameGuard} from './guards/has-git-username.guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     MaterialModule,
     BrowserAnimationsModule,
   ],
-  providers: [RepositoryService],
+  providers: [RepositoryService, HasGitUsernameGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
