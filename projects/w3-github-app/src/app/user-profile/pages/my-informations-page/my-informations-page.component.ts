@@ -28,6 +28,7 @@ export class MyInformationsPageComponent implements OnInit {
       },
         (error => {
           this.snackBar.open('Errore nel salvataggio', 'Riprova', {duration: 2000}).onAction().subscribe(() => this.saveProfile() );
-        }));
+        })
+      );
   }
 }

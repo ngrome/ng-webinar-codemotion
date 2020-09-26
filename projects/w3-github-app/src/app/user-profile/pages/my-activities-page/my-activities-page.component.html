@@ -1,1 +1,10 @@
-<p class="activities-container">Here will be my activities</p>
+<div class="activities-container">
+  <mat-list>
+    <mat-list-item *ngFor="let activity of activities; trackBy: trackById">
+      <div mat-line><strong>{{activity.entry}}</strong></div>
+      <div mat-line> {{activity.createdAt | date: 'medium' }}
+        <button mat-icon-button (click)="delete(activity.id)"><mat-icon>delete</mat-icon></button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

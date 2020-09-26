@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RepositoryService } from '../../../services/repository.service';
 import { GitUser } from '../../../models/git-user';
+import {UserActivitiesService} from '../../../services/user-activities.service';
 
 @Component({
   selector: 'app-git-users',
@@ -17,7 +18,8 @@ export class UsersListComponent implements OnInit {
   pageSize = 10;
   pageSizeOptions: number[] = [5, 10, 25, 100];
 
-  constructor(private repoService: RepositoryService) { }
+  constructor(private repoService: RepositoryService,
+              private activitiesService: UserActivitiesService) { }
 
   ngOnInit() { }
 
@@ -29,6 +31,8 @@ export class UsersListComponent implements OnInit {
         this.gitUsers = resp.items;
       }
     );
+
+    this.activitiesService.addActivity(`Ricarcato il testo: ${value}`);
   }
 
 }
