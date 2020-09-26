@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "mock-server": "json-server -c json-server/json-server.json json-server/db.json",
     "w0": "ng serve w0-initialize -o",
     "w1": "ng serve w1-github-app -o",
     "w2": "ng serve w2-github-app -o",

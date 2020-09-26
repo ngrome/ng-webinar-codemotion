@@ -1,0 +1,13 @@
+{
+  "profile": {
+    "name": "User2",
+    "surname": "Test2"
+  },
+  "activities": [
+    {
+      "id": "dedef861-c993-45b7-afdc-ad99fe5375d5",
+      "entry": "Ciao",
+      "createdAt": "2020-09-26T15:18:25.995Z"
+    }
+  ]
+}
