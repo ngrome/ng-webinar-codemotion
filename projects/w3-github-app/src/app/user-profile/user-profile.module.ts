@@ -6,6 +6,8 @@ import { UserProfileRoutingModule } from "./user-profile-routing.module";
 import { ProfileContainerPageComponent } from "./pages/profile-container-page/profile-container-page.component";
 import { MyInformationsPageComponent } from "./pages/my-informations-page/my-informations-page.component";
 import { MyActivitiesPageComponent } from "./pages/my-activities-page/my-activities-page.component";
+import {FormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,6 @@ import { MyActivitiesPageComponent } from "./pages/my-activities-page/my-activit
     MyInformationsPageComponent,
     MyActivitiesPageComponent,
   ],
-  imports: [CommonModule, UserProfileRoutingModule, MaterialModule],
+  imports: [CommonModule, UserProfileRoutingModule, MaterialModule, FormsModule, MatSnackBarModule],
 })
 export class UserProfileModule {}

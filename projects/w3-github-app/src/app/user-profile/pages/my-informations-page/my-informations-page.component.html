@@ -1,3 +1,24 @@
-<div *ngIf="user$ | async as user" class="informations-container">
-  {{user | json}}
+<div *ngIf="user" class="informations-container">
+
+  <mat-form-field appearance="outline" class="form-input">
+    <!-- <mat-icon matPrefix>search</mat-icon> -->
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="user.name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-input">
+    <!-- <mat-icon matPrefix>search</mat-icon> -->
+    <mat-label>Surname</mat-label>
+    <input matInput [(ngModel)]="user.surname">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-input">
+    <!-- <mat-icon matPrefix>search</mat-icon> -->
+    <mat-label>Git Username</mat-label>
+    <input matInput [(ngModel)]="user.gitLogin">
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary" class="form-input" (click)="saveProfile()">Salva</button>
 </div>
+
+<code>{{user | json}}</code>

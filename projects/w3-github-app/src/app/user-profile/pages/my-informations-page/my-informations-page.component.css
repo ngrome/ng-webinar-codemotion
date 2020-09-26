@@ -2,3 +2,7 @@
   padding-top: 20px;
   text-align: center;
 }
+
+.form-input + .form-input {
+  margin-left: 10px;
+}
