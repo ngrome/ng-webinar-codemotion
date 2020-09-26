@@ -1,1 +1,3 @@
-<p class="informations-container">Here will be my informations</p>
+<div *ngIf="user$ | async as user" class="informations-container">
+  {{user | json}}
+</div>

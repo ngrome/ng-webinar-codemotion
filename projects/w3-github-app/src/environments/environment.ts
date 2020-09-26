@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  githubBasePath: 'https://api.github.com/'
+  githubBasePath: 'https://api.github.com/',
+  backendBasePath: '/api/'
 };
 
 /*
